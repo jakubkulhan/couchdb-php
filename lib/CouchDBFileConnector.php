@@ -397,6 +397,7 @@ final class CouchDBFileConnector implements CouchDBConnector
         list($db, $doc) = $spec;
         if (!$this->try_open($db . '/data')) return $this->error('cannot_open');
         if (($data = $this->opened[$db . '/data']->get($doc)) === NULL) return $this->error('not_found', 'missing');
+        if (isset($data['_deleted']) && $data['_deleted']) return $this->error('not_found', 'deleted');
         if (isset($query['attachments']) && $query['attachments']) {
             if (!$this->try_open($db . '/attachments')) return $this->error('cannot_open');
             $attachments = $this->opened[$db . '/attachments']->range($doc . '/', $doc . "/\xff");
