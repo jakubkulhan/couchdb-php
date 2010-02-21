@@ -93,7 +93,7 @@ The only language supported is PHP.
 
 The MIT License
 
-    Copyright (c) 2009 Jakub Kulhan <jakub.kulhan@gmail.com>
+    Copyright (c) 2009-2010 Jakub Kulhan <jakub.kulhan@gmail.com>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
