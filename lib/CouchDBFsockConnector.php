@@ -130,7 +130,7 @@ class CouchDBFsockConnector implements CouchDBConnector
     protected function addAuthorizationHeaders(&$request)
     {
         if ($this->user !== NULL) 
-            $request .= 'Authorization: Basic' . 
+            $request .= 'Authorization: Basic ' . 
                 base64_encode($this->user . ':' . $this->pass) . 
                 self::EOL;
     }
